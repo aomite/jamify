@@ -1,0 +1,38 @@
+.SearchResults {
+    width: 75%;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 0.2rem 1.16rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    margin-left: auto;  
+    margin-right: auto; 
+  }
+  
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+  }
+
+  @media only screen and (min-width: 700px) {
+    .SearchResults{
+      position: absolute;
+      max-width: 28%;  
+      height: 530px;
+      top: 20%; 
+      left: 22%;
+      margin-bottom: 0; 
+    }
+
+  }
+
+  @media only screen and (min-width: 1128px) {
+    .SearchResults {
+      position: absolute;
+      max-width: 25%;  
+      left: 16%; 
+    }
+
+  }
+  

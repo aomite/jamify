@@ -1,0 +1,150 @@
+body,
+html,
+#root {
+  height: 100%;
+  min-width: 300px; 
+  /* max-width: 504px;  */
+}
+
+html {
+  font-size: 18px;
+  background-color:  #282030; 
+}
+
+.banner {
+  background-color: #010c3f;
+}
+
+h1 {
+  padding: .45rem 0;
+  margin: auto; 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.88rem;
+  color: #fff;
+}
+
+h1 .highlight {
+  color: #6c41ec;
+  width: 100%; 
+}
+
+h2 {
+  padding: 1rem 0 .65rem; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+  text-align: center; 
+  border-bottom: 1px solid #6f6f6f;
+}
+
+.Notes {
+  visibility: hidden; 
+}
+
+.App {
+  height: 100%;
+  padding: 0 17% 10% 17%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #656565;
+}
+
+.App .Explainer-Text {
+  color: white; 
+  text-align: center;
+  font-size: 30px; 
+  max-width: 49%;
+  margin: auto;
+  line-height: 1.9rem;
+}
+
+.App .Explainer-Text span {
+  font-size: 0.8rem;
+  vertical-align: top;
+}
+
+.App-playlist {
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-container {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .App-playlist {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #root {
+    max-height: 717px;
+  }
+
+  html {
+    background-image: url('./background_photo_desktop.svg'); 
+    background-size: cover;
+    background-position: bottom right;
+    height: 748px; 
+  }
+
+  .banner {
+    width: 100%
+  }
+
+  h1 {
+    background-color: #010c3f;
+    padding: 17.2px; 
+    position: absolute; 
+    top: 0px; 
+    z-index: 1; 
+  }
+
+  .App .Explainer-Text {
+    position: absolute; 
+    color: white; 
+    top: 120px; 
+    left: 22px; 
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;  
+    max-width: 8%;
+    margin: auto;
+    line-height: 1.8rem;
+  }
+
+}
+
+@media only screen and (min-width: 1128px){
+
+  .Notes {
+    visibility: visible;
+    color: white;  
+  }
+
+  .Notes p:first-child {
+    position: absolute; 
+    bottom: 22%; 
+    max-width: 8%; 
+    left: 13px; 
+    font-size: 13px; 
+    font-style: italic;
+    text-align: center; 
+  }
+
+  .Notes p:last-child {
+    position: absolute; 
+    bottom: 1%; 
+    font-size: 13px;
+    left: 3.2%; 
+  }
+
+  .img-container  { 
+    display: initial; 
+    position: absolute; 
+    right: 10%; 
+    top: 16%; 
+  } 
+}
