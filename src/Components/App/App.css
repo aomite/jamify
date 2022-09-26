@@ -26,7 +26,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem;
   text-align: center; 
-  border-bottom: 1px solid #6f6f6f;
+  /* border-bottom: 1px solid #6f6f6f; */
 }
 
 h3 {
@@ -65,15 +65,6 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-}
-
-img {
-  position: absolute;
-  top: 21rem;
-  width: 19%;
-  height: 38%;
-  left: 1.5rem;
-  z-index: 0;
 }
 
 .banner {
@@ -123,6 +114,15 @@ img {
   bottom: 2rem;
   font-size: 11px;
   left: 7rem;
+}
+
+img {
+  position: absolute;
+  top: 21rem;
+  width: 19%;
+  height: 38%;
+  left: 1.5rem;
+  z-index: 0;
 }
 
 .img-container  { 
