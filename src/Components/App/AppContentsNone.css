@@ -3,8 +3,7 @@
     background-color: #2F516B;
     padding: 1rem;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    margin-top: 50%;
 }
 
 .mobileH4 {
