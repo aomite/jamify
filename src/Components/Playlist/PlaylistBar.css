@@ -1,0 +1,32 @@
+.PlaylistBar {
+  background-color: #ACCEE8;
+  border: unset;
+  z-index: 2;
+  position: absolute;
+  padding: 1rem 5rem;
+  right: 9.45rem;
+  top: 5.86rem;
+}
+
+.PlaylistBar input {
+  padding: unset; 
+  background-color: unset;
+  border: unset;
+  /* font-family: 'Poppins', sans-serif; */
+  text-align: center; 
+  font-size: 1.02rem;
+  z-index: inherit;
+  color: white; 
+}
+
+.PlaylistBar input:focus {
+  outline: none; 
+}
+
+/* .toggleOff {
+  color: white;
+}
+
+.toggleOn {
+  color: black;
+} */
