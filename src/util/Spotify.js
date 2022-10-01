@@ -1,5 +1,5 @@
 const clientId = `${process.env.REACT_APP_API_KEY_V2}`;
-const redirectUri = "https://jamify.netlify.app";
+const redirectUri = "https://jamifyv2.netlify.app";
 // const redirectUri = "http://localhost:3000"
 let accessToken; 
 
