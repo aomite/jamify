@@ -12,6 +12,9 @@
 /build
 
 # misc
+bugTracker.txt
+scrapCode.txt
+
 .DS_Store
 .env
 .env.local

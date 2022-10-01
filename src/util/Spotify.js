@@ -1,7 +1,6 @@
-//const clientId = `${process.env.REACT_APP_API_KEY}`;
-const clientId = '8a00cf997bbe4e2e8c11a96b6399d7ef'; 
-//const redirectUri = "https://jamify.netlify.app";
-const redirectUri = "http://localhost:3000"
+const clientId = `${process.env.REACT_APP_API_KEY_V2}`;
+const redirectUri = "https://jamify.netlify.app";
+// const redirectUri = "http://localhost:3000"
 let accessToken; 
 
 const Spotify = {
@@ -33,7 +32,6 @@ const Spotify = {
 
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, { 
             headers: { Authorization: `Bearer ${accessToken}` }
-            //headers: { Authorization: 'Bearer 21287605c30e479c89d1a4dd2dc45f93' }
         }).then(response => {
             return response.json(); 
         }).then(jsonResponse => {

@@ -1,81 +1,64 @@
 import './App.css';
-// import SearchBar from '../SearchBar/SearchBar'; 
-// import SearchResults from '../SearchResults/SearchResults'; 
-// import Playlist from '../Playlist/Playlist'; 
-import Spotify from '../../util/Spotify'; 
 import React from 'react';
-// import PlaylistBar from '../Playlist/PlaylistBar';
-// import music_girl from '../../images/music_girl.png'; 
-import AppContentsFull from './AppContentsFull';
-import AppContentsNone from './AppContentsNone';
-
+// import AppContentsNone from './AppContentsNone';
+import AppContentsFullEspanol from './AppContentsFullEspanol';
+import AppContentsFullEnglish from './AppContentsFullEnglish';
+import SideMenu from '../SideMenu/SideMenu';
 
 class App extends React.Component {
-  // constructor(props){
-  //   super(props); 
-  //   this.state = {
-  //     searchResults: [],
-  //     playlistName: "My Playlist", 
-  //     playlistTracks: []
-  //   }; 
+  constructor(props){
+    super(props); 
 
-  //   this.addTrack = this.addTrack.bind(this);
-  //   this.removeTrack = this.removeTrack.bind(this);
-  //   this.updatePlaylistName = this.updatePlaylistName.bind(this);  
-  //   this.savePlaylist = this.savePlaylist.bind(this);
-  //   this.search = this.search.bind(this); 
-  // }
+    this.state = {
+      isEnglish: true,
+      defaultSelection: true,
+      isBtnOneSel: true,
+      isBtnTwoSel: false,
+      isBtnThreeSel: true,
+      isBtnFourSel: false,
+      isBtnFiveSel: false,
+      isBtnSixSel: true,
+      isBtnSevenSel: false 
+    }
 
-  // componentDidMount() {
-  //   window.addEventListener('load', () => {Spotify.getAccessToken()});
-  // }
+    this.handleClick = this.handleClick.bind(this);
+  };
+
+  handleClick(e) {
+    let nameValue = e.target.name; 
   
-  // addTrack(track) {
-  //   let tracks = this.state.playlistTracks; 
-  //   if (tracks.find(savedTrack => savedTrack.id === track.id)) {
-  //     return;
-  //   } 
+    if (nameValue === "btnOne") {
+      this.setState({
+        isEnglish: true,
+        defaultSelection: true,
+        isBtnOneSel: true, 
+        isBtnTwoSel: false
+      }); 
+    } else if(nameValue === "btnTwo") {
+      this.setState({
+        isEnglish: false,
+        defaultSelection: false,
+        isBtnOneSel: false,
+        isBtnTwoSel: true
+      }); 
+    }
+  };
 
-  //   tracks.push(track); 
-  //   this.setState({ playlistTracks: tracks }); 
-  // }
-
-  // removeTrack(track) {
-  //   let tracks = this.state.playlistTracks;
-  //   tracks = tracks.filter(currentTrack => currentTrack.id !== track.id); 
-  //   this.setState({ playlistTracks: tracks }); 
-  // }
-
-  // updatePlaylistName(name) {
-  //   this.setState({ playlistName: name });
-  // }
-
-  // savePlaylist() {
-  //   const trackUris = this.state.playlistTracks.map(track => track.uri); 
-  //   Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
-  //     this.setState({
-  //       playlistName: "New Playlist", 
-  //       playlistTracks: []
-  //     })
-  //   })
-  // }
-
-  // search(term) {
-  //   Spotify.search(term).then(searchResults => {
-  //     return this.setState({searchResults: searchResults})
-  //   }); 
-  // }
-  
   render() {
-    //window.matchMedia("(max-width: 700px)").matches
     return (
-      
       <div> 
-        { window.matchMedia("(max-width: 768px)").matches ? < AppContentsNone />: <AppContentsFull /> }
+        {this.state.isEnglish ? <AppContentsFullEnglish /> : <AppContentsFullEspanol /> }
+        <div>
+          <SideMenu isEnglish={this.state.isEnglish} 
+          isSelected={this.state.defaultSelection} 
+          onClick={this.handleClick} 
+          isBtnOneSel={this.state.isBtnOneSel} 
+          isBtnTwoSel={this.state.isBtnTwoSel}
+          />
+        </div>
       </div>
-      )
-
-  }
+    )
+  };
 };
 
 export default App;

@@ -26,7 +26,6 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem;
   text-align: center; 
-  /* border-bottom: 1px solid #6f6f6f; */
 }
 
 h3 {
@@ -111,9 +110,11 @@ h3 {
 
 .Notes p:last-child {
   position: absolute;
-  bottom: 2rem;
+  bottom: 5rem;
   font-size: 11px;
-  left: 7rem;
+  left: 74.5rem;
+  z-index: 1;
+  color: rgba(255,255,255,80%);
 }
 
 img {

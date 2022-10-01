@@ -16,13 +16,10 @@ class PlaylistBar extends React.Component {
     handleNameChange(event) {
         this.props.onNameChange(event.target.value); 
         let newVal = event.target.value;
-        // const toggle = ["toggleOff", "toggleOn"];
         
-        if (newVal === "Edit Playlist Name" || "") {
-            // this.myRef.current.className = `${toggle[0]}`; 
+        if (newVal === "Edit Playlist Name" || newVal === "Nombra lista de reproducción" || newVal === "") {
             this.setState({bgColor: '#ACCEE8'}); 
         } else {
-            // this.myRef.current.className = `${toggle[1]}`; 
             this.setState({bgColor: '#3D6889'});
         }
     }
@@ -30,8 +27,8 @@ class PlaylistBar extends React.Component {
     render() {
         return (
             <div className="PlaylistBar" style={{backgroundColor: this.state.bgColor}}>
-                <input type="text" /* ref={this.myRef} className={this.state.style} */ 
-                    defaultValue="Edit Playlist Name" onChange={this.handleNameChange}/>
+                <input type="text" ref={this.myRef} className={this.state.style}  
+                    defaultValue={this.props.defaultText} style={{width: this.props.inputWidth, position: this.props.inputPosition, right: this.props.inputRight }} onChange={this.handleNameChange}/>
             </div>
         ); 
     }
