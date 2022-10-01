@@ -1,5 +1,6 @@
-const clientId = `${process.env.REACT_APP_API_KEY}`;
+const clientId = `${process.env.REACT_APP_API_KEY_V2}`;
 const redirectUri = "https://jamify.netlify.app";
+// const redirectUri = "http://localhost:3000"
 let accessToken; 
 
 const Spotify = {

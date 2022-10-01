@@ -1,38 +1,40 @@
 .SearchResults {
-    width: 75%;
-    height: 400px;
-    overflow-y: scroll;
-    padding: 0.2rem 1.16rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-    margin-bottom: 2rem;
-    margin-left: auto;  
-    margin-right: auto; 
-  }
-  
-  ::-webkit-scrollbar {
-      width: 0px;
-      background: transparent;
-  }
+  overflow-y: scroll;
+  padding: 1.8rem 4.87rem 0.2rem;
+  background-color: #7F99AC;
+  position: relative;
+  top: 1.7rem;
+  left: 18.4rem;
+  margin-bottom: 0;
+  width: 24.84%;
+  height: 517px;
 
-  @media only screen and (min-width: 700px) {
-    .SearchResults{
-      position: absolute;
-      max-width: 28%;  
-      height: 530px;
-      top: 20%; 
-      left: 22%;
-      margin-bottom: 0; 
-    }
+  /* Firefox (Only) Fallback */
+  scrollbar-color: #ACCEE8 #5E788D;
+  scrollbar-width: thin;
+}
 
-  }
+.section_title {
+  position: absolute;
+  left: 18.4rem;
+  top: 6.7rem;
+  background-color: #7F99AC;
+  padding: 1rem 12.78rem;
+}
 
-  @media only screen and (min-width: 1128px) {
-    .SearchResults {
-      position: absolute;
-      max-width: 25%;  
-      left: 16%; 
-    }
+/* Safari/Chome Specific */
+.SearchResults::-webkit-scrollbar {
+  width: .4rem;
+  -webkit-appearance: scrollbarthumb-vertical;
+}
+.SearchResults::-webkit-scrollbar-track {
+  border-radius: 54px;
+  background: #5E788D;
+}
+.SearchResults::-webkit-scrollbar-thumb {
+  background-color: #ACCEE8;
+  border-radius: 54px;
+}
 
-  }
+
   

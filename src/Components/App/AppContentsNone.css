@@ -1,0 +1,22 @@
+.mobile-StandIn {
+    display: flex;
+    background-color: #2F516B;
+    padding: 1rem;
+    flex-direction: column;
+    margin-top: 50%;
+}
+
+.mobileH4 {
+    line-height: 1.6rem;
+    color: white;
+    text-align: center;
+}
+
+.mobileH4:first-of-type {
+    font-weight: bolder; 
+}
+
+.mobileH4:last-of-type {
+    margin-top: 1.5rem; 
+    font-size: 1rem; 
+}
