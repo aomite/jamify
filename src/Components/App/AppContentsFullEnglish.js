@@ -79,7 +79,7 @@ class AppContentsFullEnglish extends React.Component {
                             playlistTracks={this.state.playlistTracks} 
                             onRemove={this.removeTrack} 
                             onSave={this.savePlaylist} />
-                        <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button> 
+                        <button className="Playlist-save" onClick={this.props.onSave}>Save To Spotify</button> 
                     </div>
                 </div>
 
