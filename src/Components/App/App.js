@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 // import AppContentsNone from './AppContentsNone';
+import music_girl from '../../images/music_girl.png'; 
 import AppContentsFullEspanol from './AppContentsFullEspanol';
 import AppContentsFullEnglish from './AppContentsFullEnglish';
 import SideMenu from '../SideMenu/SideMenu';
@@ -56,6 +57,7 @@ class App extends React.Component {
           isBtnTwoSel={this.state.isBtnTwoSel}
           />
         </div>
+        <img src={music_girl} alt="" />  
       </div>
     )
   };
