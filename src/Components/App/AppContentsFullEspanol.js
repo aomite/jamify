@@ -3,7 +3,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults'; 
 import Playlist from '../Playlist/Playlist'; 
 import PlaylistBar from '../Playlist/PlaylistBar';
-import music_girl from '../../images/music_girl.png'; 
 import Spotify from '../../util/Spotify'; 
 
 class AppContentsFullEspanol extends React.Component {
@@ -88,8 +87,6 @@ class AppContentsFullEspanol extends React.Component {
                     <p style={{padding: '2.6rem 5.65rem 0.5rem'}}>*Se requiere cuenta de Spotify</p>
                     <p>Versión 0.5.0</p>
                 </div>
-
-                <img src={music_girl} alt="" />      
             </React.Fragment>
         )
     }

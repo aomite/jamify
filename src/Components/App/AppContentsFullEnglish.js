@@ -3,7 +3,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults'; 
 import Playlist from '../Playlist/Playlist'; 
 import PlaylistBar from '../Playlist/PlaylistBar';
-import music_girl from '../../images/music_girl.png'; 
 import Spotify from '../../util/Spotify'; 
 
 class AppContentsFullEnglish extends React.Component {
@@ -87,9 +86,7 @@ class AppContentsFullEnglish extends React.Component {
                 <div className="Notes">
                     <p>*Spotify account required</p>
                     <p>Version 0.5.0</p>
-                </div>
-
-                <img src={music_girl} alt="" />      
+                </div>    
             </React.Fragment>
         )
     }
