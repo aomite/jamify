@@ -1,7 +1,7 @@
 # Ways to access/run Jamify:
-## 1: Run in browser via app website *Recommended*
+## 1: Run in browser via app website **Recommended**
 
-App site: www.jamifyv2.netlify.app
+App site: https://www.jamifyv2.netlify.app
 
 ## 2: Download and build code
 
