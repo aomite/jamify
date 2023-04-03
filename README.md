@@ -1,4 +1,15 @@
+<<<<<<< Updated upstream
 # Getting Started with Create React App
+=======
+# Ways to access/run Jamify:
+## 1: Run web app in browser \*Recommended\*
+
+App site: https://jamifyv2.netlify.app
+
+## 2: Download and build code
+
+### Getting Started with Create React App
+>>>>>>> Stashed changes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
