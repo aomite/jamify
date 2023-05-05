@@ -20,10 +20,6 @@ class AppContentsFullEnglish extends React.Component {
         this.savePlaylist = this.savePlaylist.bind(this);
         this.search = this.search.bind(this); 
     }
-    
-    componentDidMount() {
-        window.addEventListener('load', () => {Spotify.getAccessToken()});
-    }
       
     addTrack(track) {
         let tracks = this.state.playlistTracks; 
@@ -85,7 +81,7 @@ class AppContentsFullEnglish extends React.Component {
 
                 <div className="Notes">
                     <p>*Spotify account required</p>
-                    <p>Version 0.5.0</p>
+                    <p>Version 1.1.0</p>
                 </div>    
             </React.Fragment>
         )
