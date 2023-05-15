@@ -16,11 +16,12 @@ class AppRenderSelection extends React.Component {
       isBtnThreeSel: true,
       isBtnFourSel: false,
       isBtnFiveSel: false,
-      isBtnSixSel: true,
-      isBtnSevenSel: false,
+      isSideMenuActive: false
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.openSettingsPopUp = this.openSettingsPopUp.bind(this); 
+    this.exitSettingsPopUp = this.exitSettingsPopUp.bind(this); 
   };
 
   handleClick(e) {
@@ -43,19 +44,31 @@ class AppRenderSelection extends React.Component {
     }
   };
 
+  openSettingsPopUp() {
+    return this.setState({isSideMenuActive: true}); 
+}
+
+  exitSettingsPopUp() {
+      return this.setState({isSideMenuActive: false});
+  }
+
   render() {
     return (
       <div> 
         {this.state.isEnglish ? <AppContentsFullEnglish /> : <AppContentsFullEspanol />}
-        <div>
-          <SideMenu isEnglish={this.state.isEnglish} 
-          isSelected={this.state.defaultSelection} 
-          onClick={this.handleClick} 
-          isBtnOneSel={this.state.isBtnOneSel} 
-          isBtnTwoSel={this.state.isBtnTwoSel}
-          />
+        <div className="viewSts"> 
+          <button className="mm-btn" onClick={this.openSettingsPopUp}>{this.state.isEnglish ? "Settings" : "Adjustes"}</button> 
         </div>
-        <img src={music_girl} alt="" />  
+        <div className={this.state.isSideMenuActive ? "sideMenu-parent sideMenuActive" : "sideMenu-parent sideMenuInactive"}>
+          <SideMenu isEnglish={this.state.isEnglish} 
+            isSelected={this.state.defaultSelection} 
+            onClick={this.handleClick} 
+            isBtnOneSel={this.state.isBtnOneSel} 
+            isBtnTwoSel={this.state.isBtnTwoSel}
+            isBtnThreeSel={this.state.isBtnThreeSel} />
+          <button className="exitBtn" onClick={this.exitSettingsPopUp}>{this.state.isEnglish ? "Back" : "Atrás"}</button> 
+        </div>
+        <img id="tempIgnore" src={music_girl} alt="" />  
       </div>
     )
   };

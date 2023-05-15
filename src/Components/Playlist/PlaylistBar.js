@@ -1,5 +1,4 @@
 import React /*, { useState } */ from 'react'; 
-import "./PlaylistBar.css"; 
 
 class PlaylistBar extends React.Component {
     constructor(props) {
@@ -26,9 +25,8 @@ class PlaylistBar extends React.Component {
 
     render() {
         return (
-            <div className="PlaylistBar" style={{backgroundColor: this.state.bgColor}}>
-                <input type="text" ref={this.myRef} className={this.state.style}  
-                    defaultValue={this.props.defaultText} style={{width: this.props.inputWidth, position: this.props.inputPosition, right: this.props.inputRight }} onChange={this.handleNameChange}/>
+            <div className="PlaylistBar">
+                <input type="text" ref={this.myRef} className={this.state.style} defaultValue={this.props.defaultText} onChange={this.handleNameChange}/>
             </div>
         ); 
     }

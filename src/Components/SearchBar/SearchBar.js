@@ -1,6 +1,4 @@
 import React from 'react';
-import './SearchBar.css';  
-
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -15,7 +13,7 @@ class SearchBar extends React.Component {
         this.isEnter = this.isEnter.bind(this); 
     }
     
-    search() {
+    search(event) {
         this.props.onSearch(this.state.term); 
     }
 

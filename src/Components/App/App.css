@@ -1,134 +1,1412 @@
 body,
 html,
 #root {
-  height: 100%;
-  min-width: 300px; 
-  background-color: #44769C;
-}
-
-html {
-  font-size: 18px;
-}
-
-h1 {
-  padding: .4rem 0;
+  min-width: 375px;
+  max-width: 599px; 
+  background-color: #507499;
   margin: auto; 
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.88rem;
-  color: #fff;
-  background-color: #2F516B;
-  z-index: 1; 
-}
-
-h2 {
-  padding: 1rem 0 .65rem; 
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.55rem;
-  text-align: center; 
-}
-
-h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 2.3rem;
-  color: white;
-}
-
-.Notes {
-  visibility: hidden; 
-}
-
-.App .Explainer-Text {
-  position: absolute; 
   color: white; 
-  top: 120px; 
-  left: 22px; 
-  text-align: left;
-  font-size: 20px;
-  font-weight: normal;  
-  max-width: 8%;
-  margin: auto;
-  line-height: 1.8rem;
 }
 
-.App .Explainer-Text span {
-  font-size: 0.8rem;
-  vertical-align: top;
-}
+    /* Ignore List Start */
+    #tempIgnore {
+      display: none; 
+    }
 
-.App-playlist {
+    .section_title {
+      display: none; 
+    }
+    /* Ignore List End */
+
+.banner {
+  display: flex; 
+  flex-direction: column;
   align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
 }
 
-.banner {
-  display: flex;
-  position: relative; 
-  position: relative;
-  top: 1em;
+.banner h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #375068; 
+  width: 100%;
+  padding: 0.8rem 0 0.8rem 0; 
+  text-align: center;
+}
+
+.banner div {
+  background-color: #8EA4B4; 
   width: 100%
 }
 
-.banner p {
-  padding: 1.4rem 0;
-  position: relative; 
+.banner div p {
+  font-size: 2rem;
+  font-weight: 500; 
+  line-height: 2.5rem;
+  max-width: 261px; 
+  margin: 1rem 0 1rem 1.5rem; 
+}
+
+.banner div p strong {
+  font-weight: 700; 
+}
+
+.isMobile {
+  display: block; 
+}
+
+.isMobileWide {
+  display: none; 
+}
+
+.isTablet {
+  display: none; 
+}
+
+.isHighRes {
+  display: none;
+}
+
+/* Search bar and search results */ 
+.SearchBar {
+  background-color: white;
+  width: 100%;  
+  margin-top: 2rem; 
+  text-align: center;
+}
+
+.SearchBar input {
+  font-size: 1.075rem; 
+  height: 55px; 
+  margin: 0 2rem 0 1rem;
+  border: unset; 
+  color: #507499;
+  max-width: 58%; 
+}
+
+.SearchBar button {
+  background-color: #518BB7; 
+  border: unset; 
+  border-radius: 25px;
+  padding: 0.5rem 1rem; 
   color: white; 
+  text-transform: uppercase;
+  max-width: 24%; 
+}
+
+.srWindow {
+  display: none; 
+}
+
+.isInactive {
+  display: none; 
+}
+
+.isActive {
+  display: block;
+  z-index: 1; 
+}
+
+.SearchBarMobile {
+  background-color: white;
+  width: 100%;
   text-align: center;
-  background-color: #7F99AC;
-  font-weight: 600;
-  order: 2; 
-  width: 77%; 
-}
-
-#logo {
-  padding: 1rem 0; 
-  order: 1; 
-  width: 23%; 
-  margin: unset; 
-}
-
-.Notes {
-  visibility: visible;
-  color: white;  
-}
-
-.Notes p:first-child {
+  z-index: 2;
   position: absolute;
-  bottom: 1.2rem;
-  left: 49.95rem;
-  font-size: 11px;
-  font-style: italic;
+  top: 58px;
+}
+
+.SearchBarMobile input {
+  font-size: 1.075rem; 
+  height: 55px; 
+  margin: 0 2rem 0 1rem;
+  border: unset; 
+  color: #507499;
+  max-width: 58%; 
+}
+
+.SearchBarMobile button {
+  background-color: #518BB7; 
+  border: unset; 
+  border-radius: 25px;
+  padding: 0.5rem 1rem; 
+  color: white; 
+  text-transform: uppercase;
+  max-width: 24%; 
+}
+
+.SearchResultsMobile {
+  background-color: #8EA4B4;
+  height: 81%;
+  width: 100%;
+  overflow-y: scroll;
+  position: absolute;
+  top: 115px; 
+}
+
+.exitBtn {
+  font-size: 1.25rem; 
+  font-weight: 600; 
   text-align: center;
-  background-color: #7F99AC;
-  padding: 2.6rem 6.375rem 0.5rem;
-}
-
-.Notes p:last-child {
+  background-color: #922222;
+  height: 55px; 
+  border: unset; 
+  color: white;
+  width: 100%;
   position: absolute;
-  bottom: 5rem;
-  font-size: 11px;
-  left: 74.5rem;
+  bottom: 0%;
   z-index: 1;
-  color: rgba(255,255,255,80%);
 }
 
-img {
+.exitBtn:hover {
+  background-color: #4e1212; 
+}
+
+/* Playlist */ 
+.PlaylistBar {
+  background-color: #456481; 
+  margin-top: 2rem; 
+  width: 100%; 
+}
+
+.PlaylistBar input {
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  text-align: center;
+  background-color: #456481;
+  height: 55px; 
+  border: unset; 
+  color: white;
+  width: 100%; 
+  padding: unset;
+}
+
+.plWindow {
+  display: none; 
+}
+
+.plInactive {
+  display: none; 
+}
+
+.plActive {
+  display: block; 
+  z-index: 1;
+}
+
+.plActive h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 21rem;
-  width: 19%;
-  height: 38%;
-  left: 1.5rem;
-  z-index: 0;
+  top: 45px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #456481;
+  height: 55px;
+  border: unset;
+  color: white;
+  width: 100%;
+  margin-top: 0.75rem;
+} 
+
+.plActive .Playlist{
+  position: absolute;
+  top: 112px;
+  background-color: #8EA4B4;
+  height: 82%;
+  width: 100%;
+  overflow-y: scroll;
 }
 
-.img-container  { 
-  display: initial; 
-  position: absolute; 
-  right: 10%; 
-  top: 16%; 
-} 
+.App-playlist h3 {
+  display: none; 
+}
+
+/* SearchBar & PlaylistBar */ 
+input::placeholder {
+  color: #507499;
+  font-weight: 600; 
+}
+
+/* Other mobile menu buttons */
+.mm-btn {
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  text-align: center;
+  background-color: #456481;
+  height: 55px; 
+  border: unset; 
+  color: white;
+  width: 100%; 
+  margin-top: 0.75rem; 
+}
+
+.pl-save-btn {
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  text-align: center;
+  background-color: #518BB7;
+  height: 55px; 
+  border: unset; 
+  color: white;
+  width: 100%;
+  min-width: 375px;
+  position: absolute;
+  bottom: 0%;
+}
+
+/* Track and Tracklist */
+.Track {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; 
+  padding-bottom: 1rem;  
+}
+
+.Track-action {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 3rem;
+  transition: color .25s;
+  border: 0px;
+  background-color: unset;
+  color: white;
+  margin-right: 1rem;
+}
+
+.Track-action:hover {
+  color: #2F516B;
+}
+
+.Track-information {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85px;
+  margin-left: .5rem; 
+  font-size: 1.5rem; 
+  padding: 0.5rem 0 1rem 0
+}
+
+.Track-information h3 {
+  margin-bottom: -0.60rem;
+  margin-top: 1rem;
+  text-align: left; 
+  font-weight: 800; 
+  margin-left: 1rem; 
+}
+
+.Track-information p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  padding-top: 1.2rem;
+  margin-left: 1rem;  
+}
+
+.TrackList {
+  width: 100%;
+  height: 95%;
+}
+
+/* Side/setting Menu */
+.sideMenuInactive {
+  display: none; 
+}
+
+.sideMenuActive {
+  display: block; 
+  z-index: 1; 
+}
+
+.sideMenuActive .sideMenu .sideMenuTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #456481;
+  height: 55px;
+  border: unset;
+  color: white;
+  width: 100%;
+}
+
+.sideMenu {
+  position: absolute;
+  top: 54px;
+  width: 100%;
+  background-color: #8EA4B4;
+  height: 87%; 
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+  align-content: flex-end;
+  align-items: flex-end;
+  margin-top: 6rem; 
+}
+
+.sidebarTitleSub {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #456481;
+  padding: 1.5rem;
+  border-radius: 15px 0 0 15px;
+}
+
+.sideMenu div h5 {
+  font-weight: 500;
+  width: 31.5%
+}
+
+.sideMenu div:nth-of-type(3) h5 {
+  width: 124px; 
+}
+
+/* Buttons */
+.selected {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(61, 106, 141, 60%);
+  margin-top: 1rem;
+  border-radius: 15px 0 0 15px;
+  border-style: unset;
+  height: 40px;
+  width: 34%; 
+}
+
+.unselected {
+  font-size: 1rem;
+  font-weight: 400; 
+  color: white;
+  background-color: rgba(61, 106, 141, 20%);
+  margin-top: 1rem;
+  border-radius: 15px 0 0 15px; 
+  border-style: unset; 
+  height: 35px;
+  width: 26%; 
+}
+
+.unReady {
+  display: none; 
+}
+
+/*** Stylings for viewport size 600-767px ***/
+@media screen and (min-width:600px) and (max-width:767px) {
+  body, 
+  html, 
+  #root {
+    min-width: 600px; 
+    max-width: 767px; 
+    /* May contain potential bug */
+  }
+
+  .isMobileWide {
+    display: block; 
+    max-width: 80% !important; 
+  }
+
+  .isMobile {
+    display: none; 
+  }
+  .isTablet {
+    display: none; 
+  }
+  .isHighRes {
+    display: none;
+  }
+
+  .SearchBar {
+    margin-top: 3rem; 
+  }
+
+  .SearchBar input {
+    width: 50%; 
+  }
+
+  .PlaylistBar {
+    margin-top: 3rem; 
+  }
+
+  .pl-save-btn {
+    margin-top: 4rem; 
+  }
+
+  /* Track and Tracklist */
+  .Track {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 0.2rem;
+    padding-bottom: 1rem;  
+  }
+
+  .Track-action {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 3rem;
+    transition: color .25s;
+    border: 0px;
+    background-color: unset;
+    color: white;
+    margin-right: 3rem;
+  }
+
+  .Track-action:hover {
+    color: #2F516B;
+  }
+
+  .Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85px;
+    margin-left: 2.5rem; 
+    font-size: 1.5rem; 
+  }
+
+  .Track-information h3 {
+    margin-bottom: -0.60rem;
+    margin-top: 1rem;
+    text-align: left; 
+    font-weight: 800; 
+  }
+
+  .Track-information p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-top: 1.2rem; 
+  }
+
+  .TrackList {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+/*** Stylings for viewport size 768-992px ***/
+@media screen and (min-width:768px) and (max-width:992px) {
+  body, 
+  html, 
+  #root {
+    min-width: 768px; 
+    max-width: 992px; 
+  }
+
+  .isTablet {
+    display: block;
+    width: 20%;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+  
+  /* Other screens */
+    .isMobile {
+      display: none; 
+    }
+    .isMobileWide {
+      display: none; 
+    }
+    .isHighRes {
+      display: none;
+    }
+
+  .banner {
+    flex-direction: row; 
+  }
+
+  .banner h1 {
+    padding: 2rem 1.5rem;
+    width: 22%; 
+  }
+
+  .banner div p {
+    font-size: 1.5rem; 
+    margin: 0.6rem 0 1rem 1rem; 
+    line-height: 2.2rem;
+    max-width: unset; 
+    width: 78%; 
+  }
+
+  .SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem; 
+    max-width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .SearchBar input {
+    font-size: 1.3rem; 
+    width: 50%; 
+  }
+
+  .SearchBarMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 95px; 
+  }
+
+  .SearchBarMobile input {
+    font-size: 1.3rem; 
+    width: 50%; 
+  }
+
+  .SearchResultsMobile {
+    height: 83%; 
+    top: 150px; 
+    z-index: 1; 
+  }
+
+  .srWindowMobile {
+    display: none; 
+    background-color: #8EA4B4;
+    max-height: 797px;
+    width: 90%;
+    margin-left: 2.4rem;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 1;
+  } 
+
+  .PlaylistBar {
+    margin-top: 1.5rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 90%; 
+  }
+
+  .PlaylistBar input {
+    font-size: 1.4rem; 
+  }
+
+  .plWindow {
+    height: 580px;
+    display: block; 
+  }
+
+  .plActive h2 {
+    top: 83px; 
+    font-size: 1.5rem; 
+  }
+
+  .plActive .Playlist {
+    top: 150px; 
+    max-width: 100%; 
+    height: 83%; 
+    z-index: 1;
+  }
+
+  .Playlist {
+    display: block; 
+    position: relative; 
+    height: 95%; 
+    max-width: 90%; 
+    margin: auto; 
+    background-color: #8EA4B4; 
+    overflow-y: scroll;
+  }
+
+  .viewPL, .viewSts {
+    max-width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .viewSts {
+    margin-top: 1rem; 
+    margin-bottom: unset; 
+  }
+
+  .mm-btn {
+    font-size: 1.4rem;
+  }
+
+  .viewSts button {
+    position: absolute;
+    bottom: 7.5%;
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+
+   /* Track and Tracklist */
+   .Track {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 0.2rem;
+    padding-bottom: 1rem;  
+  }
+
+  .Track-action {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 3rem;
+    transition: color .25s;
+    border: 0px;
+    background-color: unset;
+    color: white;
+    margin-right: 3rem;
+  }
+
+  .Track-action:hover {
+    color: #2F516B;
+  }
+
+  .Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85px;
+    margin-left: 2.5rem; 
+    font-size: 1.5rem; 
+  }
+
+  .Track-information h3 {
+    margin-bottom: -0.60rem;
+    margin-top: 1rem;
+    text-align: left; 
+    font-weight: 800; 
+  }
+
+  .Track-information p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-top: 1.2rem; 
+  }
+
+  .TrackList {
+    width: 100%;
+    height: 95%;
+  }
+
+  .sideMenu {
+    top: 150px; 
+  }
+
+  .sideMenuActive .sideMenu .sideMenuTitle {
+    top: -55px; 
+  }
+
+  .sideMenu div:nth-of-type(3) h5 {
+    width: 31.5%; 
+  }
+
+  .selected {
+    width: 30%; 
+  }
+
+  .divContainer {
+    margin-top: 4rem; 
+  }
+}
+
+/*** Stylings for viewport size 993-1199px ***/
+@media screen and (min-width:993px) and (max-width:1199px) {
+  body, 
+  html, 
+  #root {
+    min-width: 993px; 
+    max-width: 1199px; 
+  }
+
+  .isHighRes {
+    display: block;
+    width: 20%;
+    margin-top: 0.5rem;
+    margin-left: 1rem;;
+  }
+    /* Other screens */
+      .isMobile {
+        display: none; 
+      }
+      .isMobileWide {
+        display: none; 
+      }
+      .isTablet {
+        display: none; 
+      }
+    
+  .banner {
+    flex-direction: row; 
+    margin-top: 2rem;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem; 
+    margin-top: 0.8rem;
+    padding: 1rem 1rem;
+    width: 21%; 
+  }
+
+  .banner div {
+    margin-top: 0.8rem;
+    text-align: center;  
+  }
+
+  .banner div p {
+    font-size: 1.5rem; 
+    margin: 1.1rem auto 1.1rem auto; 
+    line-height: 2.2rem;
+    max-width: unset; 
+    width: 98%; 
+  }
+
+  .espanolResize {
+    font-size: 1.2rem !important; 
+  }
+
+  .SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.8rem;
+    margin-left: 2rem;
+    max-width: 38%; 
+    height: 55px; 
+  }
+
+  .SearchBar input {
+    font-size: 1.3rem; 
+    width: 60%; 
+    margin: 0 1.5rem 0 0; 
+    height: 52px; 
+  }
+
+  .srWindow {
+    display: block; 
+    height: 610px;
+    max-width: 38%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; 
+  }
+
+  .SearchResults {
+    display: block;
+    position: relative;
+    margin-left: 6%;
+    height: 95%;
+    width: 100%; 
+    background-color: #8EA4B4;
+    overflow-y: scroll;
+  }
+
+  .PlaylistBar {
+    position: relative;
+    left: 43.5%;
+    bottom: 41.8rem;
+    padding: 0.09rem;
+    max-width: 38%;
+    margin-top: 0.23rem; 
+  }
+
+  .PlaylistBar input {
+    font-size: 1.4rem; 
+  }
+
+  .plWindow {
+    display: block; 
+    height: 610px;
+  }
+
+  .Playlist {
+    display: block;
+    position: relative;
+    left: 12.65%;
+    bottom: 109.9%;
+    height: 95%;
+    max-width: 38.3%;
+    margin: auto;
+    background-color: #8EA4B4;
+    overflow-y: scroll;
+  }
+
+  .viewSts {
+    margin-top: 1rem; 
+    margin-bottom: unset; 
+  }
+
+  .mm-btn {
+    font-size: 1.4rem;
+  }
+
+  /* Track and Tracklist */
+  .Track {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 0.2rem;
+    padding-bottom: 1rem;  
+  }
+
+  .Track-action {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 2rem;
+    transition: color .25s;
+    border: 0px;
+    background-color: unset;
+    color: white;
+    margin-right: 1rem;
+  }
+
+  .Track-action:hover {
+    color: #2F516B;
+  }
+
+  .Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85px;
+    margin-left: 1rem; 
+    font-size: 1.5rem; 
+  }
+
+  .Track-information h3 {
+    margin-bottom: -0.60rem;
+    margin-top: 1rem;
+    text-align: left; 
+    font-weight: 800; 
+  }
+
+  .Track-information p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-top: 1.2rem; 
+  }
+
+  .TrackList {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Side menu */
+  .sideMenu-parent {
+    display: block;
+    width: 128px;
+    position: absolute;
+    right: 0%;
+    top: 14.5rem;
+  }
+  
+  .sideMenu {
+    flex-direction: column; 
+    height: 450px;
+    width: 128px;
+    background-color: #8EA4B4;
+  }
+
+  .sideMenuTitle {
+    font-size: 1.2rem;
+    font-weight: 600; 
+    text-align: center; 
+    color: white;
+    background-color: #456481;
+    padding: 1.1rem;
+  }
+
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    align-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1.5rem; 
+    margin-bottom: 2rem; 
+  }
+
+  .sidebarTitleSub {
+    display: flex; 
+    justify-content: flex-start;
+    font-size: 1.1rem; 
+    color: white;
+    background-color: #456481;
+    padding: 0.5rem 0.4rem 0.6rem 1rem;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .sideMenu div:nth-of-type(2) div {
+    background-color: #3D6A8D;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 1rem;
+    width: 115px;
+  }
+
+  .sideMenu div:nth-of-type(2) h5 {
+    text-align: left; 
+    font-weight: 500;
+    width: 70%; 
+  }
+
+  .sideMenu div:nth-of-type(3) h5 {
+    padding-left: 0.9rem;
+    width: 70%; 
+  }
+
+  .sideMenu div:nth-of-type(4) h5 {
+    padding-left: 1rem;
+    padding-right: 1.8rem;
+  }
+
+  /* Buttons */
+  .selected {
+    font-size: 1rem; 
+    color: white;
+    background-color: rgba(61, 106, 141, 60%);
+    padding: .05rem 0rem .05rem 0.5rem;
+    margin-top: 0.75rem;
+    border-radius: 15px 0 0 15px;
+    border-style: unset; 
+    width: 70%;
+    height: 34px; 
+  }
+
+  .unselected {
+    font-size: 0.9rem; 
+    color: white;
+    background-color: rgba(61, 106, 141, 20%);
+    padding: .05rem 0rem .05rem 1rem;
+    margin-top: 0.6rem;
+    border-radius: 15px 0 0 15px; 
+    border-style: unset; 
+    width: 60%; 
+    height: 30px; 
+  }
+
+  /* 1st Sidebar Block */
+  .sideMenu div:nth-of-type(2) button:nth-of-type(1) {
+    padding-right: 1.3rem;
+  }
+  .sideMenu div:nth-of-type(2) button:nth-of-type(2){
+    padding-right: 1rem; 
+  }
+
+  /* 2nd Sidebar Block */
+  .sideMenu div:nth-of-type(3) button:nth-of-type(1) {
+    padding-right: 1.1rem;
+  }
+  .sideMenu div:nth-of-type(3) button:nth-of-type(2) {
+    padding-right: 1.9rem;
+  }
+  .sideMenu div:nth-of-type(3) button:nth-of-type(3) {
+    padding-right: 1.8rem;
+  }
+
+  /* 3rd Sidebar Block*/
+  .sideMenu div:nth-of-type(4) button:nth-of-type(1) {
+    padding-right: 1rem;
+  }
+  .sideMenu div:nth-of-type(4) button:nth-of-type(2) {
+    padding-right: 0.3rem;
+  }
+
+  .unReady {
+    display: none;
+  }
+
+  /* Mobile Popups */ 
+  .plActive, .plInactive, .isActive, .isInactive, .viewPL, .viewSts, .exitBtn {
+    display: none;  
+  }
+}
+
+/*** Stylings for viewport size 1200+px ***/
+@media screen and (min-width:1200px) {
+  body, 
+  html, 
+  #root {
+    min-width: 1200px; 
+    max-width: unset; 
+    max-height: 920px; 
+    margin-right: auto; 
+    margin-left: auto; 
+    overflow-y: hidden; 
+  }
+
+  .isHighRes {
+    display: block;
+    width: 20%;
+    margin-top: 0.5rem;
+    margin-left: 1rem;;
+  }
+    /* Other screens */
+      .isMobile {
+        display: none; 
+      }
+      .isMobileWide {
+        display: none; 
+      }
+      .isTablet {
+        display: none; 
+      }
+    
+  .banner {
+    flex-direction: row; 
+    margin-top: 2rem;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem; 
+    margin-top: 0.8rem;
+    padding: 1rem 1rem;
+    width: 25%; 
+  }
+
+  .banner div {
+    margin-top: 0.8rem;
+    text-align: center;  
+  }
+
+  .banner div p {
+    font-size: 1.5rem; 
+    margin: 1.1rem auto 1.1rem auto; 
+    line-height: 2.2rem;
+    max-width: unset; 
+    width: 98%; 
+  }
+
+  .espanolResize {
+    font-size: 1.4rem !important; 
+  }
+
+  .SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.8rem;
+    margin-left: 2rem;
+    max-width: 38%; 
+    height: 55px; 
+  }
+
+  .SearchBar input {
+    font-size: 1.3rem; 
+    width: 60%; 
+    margin: 0 1.5rem 0 0;
+    height: 52px; 
+  }
+  .SearchBar input:focus {
+    outline: none;
+  }
+
+  .SearchButton:hover {
+    background-color: rgba(47, 81, 107, 80%);
+  }
+
+  .srWindow {
+    display: block; 
+    height: 610px;
+    width: 38%;
+    margin-left: 2rem;
+  }
+
+  .SearchResults {
+    display: block;
+    position: relative;
+    height: 95.2%;
+    background-color: #8EA4B4;
+    overflow-y: scroll;
+
+    /* Firefox (Only) Fallback */
+    scrollbar-color: #ACCEE8 #5E788D;
+    scrollbar-width: thin;
+  }
+    /* Safari/Chome Specific */
+  .SearchResults::-webkit-scrollbar {
+    width: .4rem;
+    -webkit-appearance: scrollbarthumb-vertical;
+  }
+  .SearchResults::-webkit-scrollbar-track {
+    border-radius: 54px;
+    background: #5E788D;
+  }
+  .SearchResults::-webkit-scrollbar-thumb {
+    background-color: #ACCEE8;
+    border-radius: 54px;
+  }
+
+  .PlaylistBar {
+    position: relative;
+    left: 43.5%;
+    bottom: 41.8rem;
+    padding: 0.09rem;
+    max-width: 38%;
+    margin-top: 0.23rem; 
+  }
+
+  .PlaylistBar input {
+    font-size: 1.4rem; 
+  }
+  .PlaylistBar input:focus {
+    outline: none; 
+  }
+
+  .plActive, .plInactive {
+    display: none; 
+  }
+
+  .plWindow {
+    display: block; 
+    height: 610px;
+  }
+
+  .Playlist {
+    display: block;
+    position: relative;
+    left: 12.65%;
+    bottom: 109.9%;
+    height: 87%;
+    max-width: 38.3%;
+    margin: auto;
+    background-color: #8EA4B4;
+    overflow-y: scroll;
+
+    /* Firefox (Only) Fallback */
+    scrollbar-color: #ACCEE8 #5E788D;
+    scrollbar-width: thin;
+  }
+
+  .pl-save-btn {
+    /* width: 460px; */
+    width: 38.5%; 
+    position: relative;
+    left: 43.5%;
+    bottom: 47.25rem;
+  }
+
+  .Playlist-save:hover {
+    background-color: #3D6889;
+  }
+  
+  .Playlist::-webkit-scrollbar {
+    width: .4rem;
+  }
+  .Playlist::-webkit-scrollbar-track {
+    border-radius: 54px;
+    background: #5E788D;
+  }
+  .Playlist::-webkit-scrollbar-thumb {
+    background-color: #ACCEE8;
+    border-radius: 54px;
+  }
+
+  .viewPL, .viewSts {
+    display: none;  
+  }
+
+  .viewSts {
+    margin-top: 1rem; 
+    margin-bottom: unset; 
+  }
+
+  .mm-btn {
+    font-size: 1.4rem;
+  }
+
+  /* Track and Tracklist */
+  .Track {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 0.2rem;
+    padding-bottom: 1rem;  
+  }
+
+  .Track-action {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 2rem;
+    transition: color .25s;
+    border: 0px;
+    background-color: unset;
+    color: white;
+    margin-right: 1rem;
+  }
+
+  .Track-action:hover {
+    color: #2F516B;
+  }
+
+  .Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85px;
+    margin-left: 1rem; 
+    font-size: 1.5rem; 
+  }
+
+  .Track-information h3 {
+    margin-bottom: -0.60rem;
+    margin-top: 1rem;
+    text-align: left; 
+    font-weight: 800; 
+  }
+
+  .Track-information p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-top: 1.2rem; 
+  }
+
+  .TrackList {
+    width: 100%;
+    height: 95%;
+  }
+
+  /* Side menu */
+  .sideMenu-parent {
+    display: block;
+    width: 128px;
+    position: absolute;
+    right: 0%;
+    top: 14.5rem;  
+  }
+
+  .sideMenu {
+    flex-direction: column; 
+    height: 450px;
+    width: 128px;
+    background-color: #8EA4B4;
+  }
+
+  .sideMenuTitle {
+    font-size: 1.2rem;
+    font-weight: 600; 
+    text-align: center; 
+    color: white;
+    background-color: #456481;
+    padding: 1.1rem;
+  }
+
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    align-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1.5rem; 
+    margin-bottom: 2rem; 
+  }
+
+  .sidebarTitleSub {
+    display: flex; 
+    justify-content: flex-start;
+    font-size: 1.1rem; 
+    color: white;
+    background-color: #456481;
+    padding: 0.5rem 0.4rem 0.6rem 1rem;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .sideMenu div:nth-of-type(2) div {
+    background-color: #3D6A8D;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 1rem;
+    width: 115px;
+  }
+
+  .sideMenu div:nth-of-type(2) h5 {
+    text-align: left; 
+    font-weight: 500;
+    width: 70%; 
+  }
+
+  .sideMenu div:nth-of-type(3) h5 {
+    padding-left: 0.9rem;
+    width: 70%; 
+  }
+
+  .sideMenu div:nth-of-type(4) h5 {
+    padding-left: 1rem;
+    padding-right: 1.8rem;
+  }
+
+  /* Buttons */
+  .selected {
+    font-size: 1rem; 
+    color: white;
+    background-color: rgba(61, 106, 141, 60%);
+    padding: .05rem 0rem .05rem 0.5rem;
+    margin-top: 0.75rem;
+    border-radius: 15px 0 0 15px;
+    border-style: unset; 
+    width: 70%;
+    height: 34px; 
+  }
+
+  .unselected {
+    font-size: 0.9rem; 
+    color: white;
+    background-color: rgba(61, 106, 141, 20%);
+    padding: .05rem 0rem .05rem 1rem;
+    margin-top: 0.6rem;
+    border-radius: 15px 0 0 15px; 
+    border-style: unset; 
+    width: 60%; 
+    height: 30px; 
+  }
+
+  /* 1st Sidebar Block */
+  .sideMenu div:nth-of-type(2) button:nth-of-type(1) {
+    padding-right: 1.3rem;
+  }
+  .sideMenu div:nth-of-type(2) button:nth-of-type(2){
+    padding-right: 1rem; 
+  }
+
+  /* 2nd Sidebar Block */
+  .sideMenu div:nth-of-type(3) button:nth-of-type(1) {
+    padding-right: 1.1rem;
+  }
+  .sideMenu div:nth-of-type(3) button:nth-of-type(2) {
+    padding-right: 1.9rem;
+  }
+  .sideMenu div:nth-of-type(3) button:nth-of-type(3) {
+    padding-right: 1.8rem;
+  }
+
+  /* 3rd Sidebar Block*/
+  .sideMenu div:nth-of-type(4) button:nth-of-type(1) {
+    padding-right: 1rem;
+  }
+  .sideMenu div:nth-of-type(4) button:nth-of-type(2) {
+    padding-right: 0.3rem;
+  }
+
+  .unReady {
+    display: none;
+  }
+
+  /* Mobile Popups */ 
+  .plActive, .plInactive, .isActive, .isInactive, .viewPL, .viewSts, .exitBtn {
+    display: none;  
+  }
+
+}
