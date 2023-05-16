@@ -748,7 +748,7 @@ input::placeholder {
     
   .banner {
     flex-direction: row; 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .banner h1 {
@@ -824,20 +824,31 @@ input::placeholder {
   }
 
   .plWindow {
-    display: block; 
-    height: 610px;
+    display: block;
+    height: 582px;
+    width: 38.2%;
+    position: absolute;
+    top: 33.5%;
+    left: 43.5%;
+    background-color: #8ea4b4;
   }
 
   .Playlist {
-    display: block;
-    position: relative;
-    left: 12.65%;
+    background-color: #8ea4b4;
     bottom: 109.9%;
-    height: 95%;
-    max-width: 38.3%;
+    display: block;
+    height: 91%;
+    /* left: 12.65%; */
     margin: auto;
-    background-color: #8EA4B4;
+    max-width: 100%;
     overflow-y: scroll;
+    position: relative;
+    top: 0%;
+    right: 0%;
+
+    /* Firefox (Only) Fallback */
+    scrollbar-color: #ACCEE8 #5E788D;
+    scrollbar-width: thin;
   }
 
   .viewSts {
@@ -908,7 +919,7 @@ input::placeholder {
     width: 128px;
     position: absolute;
     right: 0%;
-    top: 14.5rem;
+    top: 13.5rem;
   }
   
   .sideMenu {
@@ -1064,7 +1075,7 @@ input::placeholder {
     
   .banner {
     flex-direction: row; 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .banner h1 {
@@ -1089,6 +1100,10 @@ input::placeholder {
 
   .espanolResize {
     font-size: 1.4rem !important; 
+  }
+
+  .App {
+    margin-top: -1rem; 
   }
 
   .SearchBar {
@@ -1168,32 +1183,43 @@ input::placeholder {
   }
 
   .plWindow {
-    display: block; 
-    height: 610px;
+    display: block;
+    height: 582px;
+    width: 38.2%;
+    position: absolute;
+    top: 33.5%;
+    left: 43.5%;
+    background-color: #8ea4b4;
   }
 
   .Playlist {
-    display: block;
-    position: relative;
-    left: 12.65%;
+    background-color: #8ea4b4;
     bottom: 109.9%;
-    height: 87%;
-    max-width: 38.3%;
+    display: block;
+    height: 91%;
+    /* left: 12.65%; */
     margin: auto;
-    background-color: #8EA4B4;
+    max-width: 100%;
     overflow-y: scroll;
+    position: relative;
+    top: 0%;
+    right: 0%;
 
     /* Firefox (Only) Fallback */
     scrollbar-color: #ACCEE8 #5E788D;
     scrollbar-width: thin;
   }
 
+  .plbtndiv {
+    position: absolute;
+    bottom: -5.75rem;
+    right: 18.3%;
+    background-color: white;
+    width: 38.2%;
+  } 
+
   .pl-save-btn {
-    /* width: 460px; */
-    width: 38.5%; 
-    position: relative;
-    left: 43.5%;
-    bottom: 47.25rem;
+    width: 100%;
   }
 
   .Playlist-save:hover {
@@ -1284,7 +1310,7 @@ input::placeholder {
     width: 128px;
     position: absolute;
     right: 0%;
-    top: 14.5rem;  
+    top: 13.5rem;  
   }
 
   .sideMenu {

@@ -150,7 +150,7 @@ class AppContentsFullEnglish extends React.Component {
                         onSave={this.savePlaylist} />
                 </div>
 
-                <div>
+                <div className="plbtndiv">
                     <button className="Playlist-save pl-save-btn" onClick={this.props.onSave}>Save to Spotify</button>
                 </div>    
             </React.Fragment>
