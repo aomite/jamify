@@ -16,7 +16,7 @@ class PlaylistBar extends React.Component {
         this.props.onNameChange(event.target.value); 
         let newVal = event.target.value;
         
-        if (newVal === "Edit Playlist Name" || newVal === "Nombra lista de reproducción" || newVal === "") {
+        if (newVal === "Edit Playlist Name" || newVal === "Nombre tu lista de reproducción" || newVal === "") {
             this.setState({bgColor: '#ACCEE8'}); 
         } else {
             this.setState({bgColor: '#3D6889'});

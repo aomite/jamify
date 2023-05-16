@@ -8,6 +8,11 @@ html,
   color: white; 
 }
 
+.wrapper {
+  max-height: 1000px;
+  overflow-y: hidden;
+}
+
     /* Ignore List Start */
     #tempIgnore {
       display: none; 
@@ -53,6 +58,10 @@ html,
 
 .isMobile {
   display: block; 
+}
+
+.banner div .isMobileSpanish {
+  font-size: 1.7rem; 
 }
 
 .isMobileWide {
@@ -352,7 +361,11 @@ input::placeholder {
   justify-items: end;
   align-content: flex-end;
   align-items: flex-end;
-  margin-top: 6rem; 
+  margin-top: 5rem; 
+}
+
+.divContainer:last-of-type {
+  margin-top: 3rem;
 }
 
 .sidebarTitleSub {
@@ -361,7 +374,7 @@ input::placeholder {
   font-size: 1.6rem;
   color: white;
   background-color: #456481;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 15px 0 0 15px;
 }
 
@@ -539,7 +552,7 @@ input::placeholder {
     margin: 0.6rem 0 1rem 1rem; 
     line-height: 2.2rem;
     max-width: unset; 
-    width: 78%; 
+    width: 82%; 
   }
 
   .SearchBar {
@@ -1221,9 +1234,9 @@ input::placeholder {
   }
 
   .plbtndiv {
-    position: absolute;
-    bottom: -4.25rem;
-    right: 18.3%;
+    position: relative;
+    bottom: 42rem;
+    right: -43.5%;
     background-color: white;
     width: 38.2%;
   } 

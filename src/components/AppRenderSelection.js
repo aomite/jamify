@@ -54,7 +54,7 @@ class AppRenderSelection extends React.Component {
 
   render() {
     return (
-      <div> 
+      <div className="wrapper">  
         {this.state.isEnglish ? <AppContentsFullEnglish /> : <AppContentsFullEspanol />}
         <div className="viewSts"> 
           <button className="mm-btn" onClick={this.openSettingsPopUp}>{this.state.isEnglish ? "Settings" : "Adjustes"}</button> 

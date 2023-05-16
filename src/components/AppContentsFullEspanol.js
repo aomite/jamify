@@ -92,12 +92,11 @@ class AppContentsFullEnglish extends React.Component {
                 <div className="banner">
                     <h1 id="logo">JAMIFY</h1>
                     <div>
-                        <p className="isMobile">
-                            <strong>Busca</strong> sus canciones favoritos en Spotify<span>*</span><br></br>
-                            y agréguelos a una nueva lista de reproducción.
-                            </p>
+                        <p className="isMobile isMobileSpanish">
+                            <strong>Busca</strong> sus canciones favoritos en Spotify<span>*</span> y agréguelos a una nueva lista de reproducción.
+                        </p>
                         
-                        <p className="isMobileWide">
+                        <p className="isMobileWide isMobileWideSpanish">
                             <strong>Busca</strong> sus canciones favoritos en Spotify<span>*</span> y agréguelos a una nueva lista de reproducción. 
                         </p>
 
@@ -113,12 +112,12 @@ class AppContentsFullEnglish extends React.Component {
                 </div>
 
                 <div className="App">
-                <SearchBar placeholder="Busca una canción, un álbum o artista" buttonText="Busca" onSearch={this.search} />
-                <div className="srWindow">
-                    <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
-                    <h3 className="section_title">Resultados</h3>
-                </div>
-                    <PlaylistBar defaultText="Editar el nombre de la lista de reproducción" onNameChange={this.updatePlaylistName} />
+                    <SearchBar placeholder="Busca una canción, un álbum o artista" buttonText="Busca" onSearch={this.search} />
+                    <div className="srWindow">
+                        <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
+                        <h3 className="section_title">Resultados</h3>
+                    </div>
+                        <PlaylistBar defaultText="Nombre lista de reproducción" onNameChange={this.updatePlaylistName} />
                 </div>
 
                 <div className={this.state.isActiveSearchResults ? "isActive" : "isInactive"}>
