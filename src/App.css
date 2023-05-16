@@ -825,25 +825,22 @@ input::placeholder {
 
   .plWindow {
     display: block;
-    height: 582px;
+    height: 551px;
     width: 38.2%;
     position: absolute;
-    top: 33.5%;
+    top: 30.5%;
     left: 43.5%;
     background-color: #8ea4b4;
   }
 
   .Playlist {
     background-color: #8ea4b4;
-    bottom: 109.9%;
     display: block;
-    height: 91%;
-    /* left: 12.65%; */
+    height: 100%;
     margin: auto;
     max-width: 100%;
     overflow-y: scroll;
     position: relative;
-    top: 0%;
     right: 0%;
 
     /* Firefox (Only) Fallback */
@@ -1184,25 +1181,23 @@ input::placeholder {
 
   .plWindow {
     display: block;
-    height: 582px;
+    height: 526px;
     width: 38.2%;
     position: absolute;
-    top: 33.5%;
+    top: 30.5%;
     left: 43.5%;
     background-color: #8ea4b4;
   }
 
   .Playlist {
     background-color: #8ea4b4;
-    bottom: 109.9%;
     display: block;
-    height: 91%;
+    height: 100%;
     /* left: 12.65%; */
     margin: auto;
     max-width: 100%;
     overflow-y: scroll;
     position: relative;
-    top: 0%;
     right: 0%;
 
     /* Firefox (Only) Fallback */
@@ -1212,7 +1207,7 @@ input::placeholder {
 
   .plbtndiv {
     position: absolute;
-    bottom: -5.75rem;
+    bottom: -4.25rem;
     right: 18.3%;
     background-color: white;
     width: 38.2%;
@@ -1310,7 +1305,7 @@ input::placeholder {
     width: 128px;
     position: absolute;
     right: 0%;
-    top: 13.5rem;  
+    top: 12.5rem;  
   }
 
   .sideMenu {
