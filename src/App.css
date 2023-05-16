@@ -832,8 +832,8 @@ input::placeholder {
     background-color: #8ea4b4;
     height: 579px;
     left: 43.5%;
-    position: absolute;
-    top: 30.5%;
+    position: relative;
+    bottom: 42rem;
     width: 38.2%;
   }
 
@@ -863,7 +863,7 @@ input::placeholder {
 
   .plbtndiv {
     position: absolute;
-    bottom: -24%;
+    bottom: 0%;
     width: 100%;
   }
 
@@ -1196,10 +1196,10 @@ input::placeholder {
 
   .plWindow {
     display: block;
-    height: 526px;
+    height: 580px;
     width: 38.2%;
-    position: absolute;
-    top: 30.5%;
+    position: relative;
+    bottom: 42rem;
     left: 43.5%;
     background-color: #8ea4b4;
   }
