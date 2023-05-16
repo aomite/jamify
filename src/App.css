@@ -775,6 +775,10 @@ input::placeholder {
     font-size: 1.2rem !important; 
   }
 
+  .App {
+    margin-top: -1rem; 
+  }
+
   .SearchBar {
     display: flex;
     align-items: center;
@@ -825,12 +829,12 @@ input::placeholder {
 
   .plWindow {
     display: block;
-    height: 551px;
-    width: 38.2%;
+    background-color: #8ea4b4;
+    height: 579px;
+    left: 43.5%;
     position: absolute;
     top: 30.5%;
-    left: 43.5%;
-    background-color: #8ea4b4;
+    width: 38.2%;
   }
 
   .Playlist {
@@ -855,6 +859,17 @@ input::placeholder {
 
   .mm-btn {
     font-size: 1.4rem;
+  }
+
+  .plbtndiv {
+    position: absolute;
+    bottom: -24%;
+    width: 100%;
+  }
+
+  .pl-save-btn {
+    background-color: #518bb7;
+    min-width: 375px;
   }
 
   /* Track and Tracklist */
@@ -916,7 +931,7 @@ input::placeholder {
     width: 128px;
     position: absolute;
     right: 0%;
-    top: 13.5rem;
+    top: 11.5rem;
   }
   
   .sideMenu {
