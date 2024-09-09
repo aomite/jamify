@@ -7,7 +7,7 @@ Site link: https://jamifyv2.netlify.app/
 - English and Spanish language support
 - Responsive layout
 
-### Yet to launch/In-progress
+### Yet-to-launch/In-progress
 - Color/Theme selection
 
 #### Possible improvements 
